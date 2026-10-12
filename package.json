@@ -1,6 +1,6 @@
 {
   "name": "@acedatacloud/n8n-nodes-gpt-image",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate and edit GPT Image visuals with reference images, size and quality controls, and asynchronous task tracking in n8n via AceDataCloud.",
   "license": "MIT",
   "homepage": "https://github.com/AceDataCloud/GPTImageN8N",
