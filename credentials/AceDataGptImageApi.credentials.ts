@@ -7,7 +7,7 @@ import type {
 
 export class AceDataGptImageApi implements ICredentialType {
   name = "aceDataGptImageApi";
-  displayName = "GPT Image by AceDataCloud API";
+  displayName = "GPT Image by Ace Data Cloud API";
   documentationUrl = "https://github.com/AceDataCloud/GPTImageN8N#credentials";
   icon = "file:../nodes/GptImage/icon.png" as const;
   properties: INodeProperties[] = [
@@ -19,6 +19,13 @@ export class AceDataGptImageApi implements ICredentialType {
       default: "",
       required: true,
       description: "Your AceDataCloud application API token",
+    },
+    {
+      displayName:
+        'Create or copy an application API key in <a href="https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=gptimagen8n_credential_api_key" target="_blank">Ace Data Cloud Applications</a>. Paste only the token into API Token; do not add Bearer.',
+      name: "keySetup",
+      type: "notice",
+      default: "",
     },
   ];
   authenticate: IAuthenticateGeneric = {
