@@ -20,19 +20,35 @@ import { properties } from "./properties";
 import { buildRequest } from "./request";
 export class GptImage implements INodeType {
   description: INodeTypeDescription = {
-    displayName: "GPT Image by AceDataCloud",
+    displayName: "GPT Image by Ace Data Cloud",
     name: "gptImage",
     icon: { light: "file:icon.png", dark: "file:icon.dark.png" },
     group: ["transform"],
     version: 1,
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
     description:
-      "Generate and edit GPT Image visuals with reference images, size and quality controls, and asynchronous task tracking in workflows.",
-    defaults: { name: "GPT Image by AceDataCloud" },
+      "Generate and edit GPT Image visuals and retrieve the same task through Ace Data Cloud",
+    defaults: { name: "GPT Image by Ace Data Cloud" },
     inputs: [NodeConnectionTypes.Main],
     outputs: [NodeConnectionTypes.Main],
     usableAsTool: true,
     credentials: [{ name: "aceDataGptImageApi", required: true }],
+    codex: {
+      alias: ["gpt image", "gpt-image", "image generation"],
+      categories: ["Marketing & Content"],
+      resources: {
+        primaryDocumentation: [
+          {
+            url: "https://github.com/AceDataCloud/GPTImageN8N#use-the-node",
+          },
+        ],
+        credentialDocumentation: [
+          {
+            url: "https://github.com/AceDataCloud/GPTImageN8N#credentials",
+          },
+        ],
+      },
+    },
     properties,
   };
   async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
