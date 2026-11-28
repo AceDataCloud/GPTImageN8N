@@ -7,7 +7,7 @@ import type {
 
 export class AceDataGptImageApi implements ICredentialType {
   name = "aceDataGptImageApi";
-  displayName = "GPT Image by Ace Data Cloud API";
+  displayName = "GPT Image API";
   documentationUrl = "https://github.com/AceDataCloud/GPTImageN8N#credentials";
   icon = "file:../nodes/GptImage/icon.png" as const;
   properties: INodeProperties[] = [

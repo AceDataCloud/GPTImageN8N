@@ -20,7 +20,7 @@ import { properties } from "./properties";
 import { buildRequest } from "./request";
 export class GptImage implements INodeType {
   description: INodeTypeDescription = {
-    displayName: "GPT Image by Ace Data Cloud",
+    displayName: "GPT Image",
     name: "gptImage",
     icon: { light: "file:icon.png", dark: "file:icon.dark.png" },
     group: ["transform"],
@@ -28,7 +28,7 @@ export class GptImage implements INodeType {
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
     description:
       "Generate and edit GPT Image visuals and retrieve the same task through Ace Data Cloud",
-    defaults: { name: "GPT Image by Ace Data Cloud" },
+    defaults: { name: "GPT Image" },
     inputs: [NodeConnectionTypes.Main],
     outputs: [NodeConnectionTypes.Main],
     usableAsTool: true,
